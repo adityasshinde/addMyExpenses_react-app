@@ -1,0 +1,31 @@
+
+.mainExpenseDiv{
+    margin: auto;
+    background-color: black;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.btn{
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 15px;
+
+}
+
+.btn:hover{
+    background-color: black;
+    color: white;
+}
+.nef{
+    color: white;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+}
