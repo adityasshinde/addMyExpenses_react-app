@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/addMyExpenses_react-app/static/css/main.b6bd872f.css",
+    "main.js": "/addMyExpenses_react-app/static/js/main.73d57708.js",
+    "static/js/787.001e509f.chunk.js": "/addMyExpenses_react-app/static/js/787.001e509f.chunk.js",
+    "index.html": "/addMyExpenses_react-app/index.html",
+    "main.b6bd872f.css.map": "/addMyExpenses_react-app/static/css/main.b6bd872f.css.map",
+    "main.73d57708.js.map": "/addMyExpenses_react-app/static/js/main.73d57708.js.map",
+    "787.001e509f.chunk.js.map": "/addMyExpenses_react-app/static/js/787.001e509f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6bd872f.css",
+    "static/js/main.73d57708.js"
+  ]
+}
