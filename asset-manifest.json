@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/addMyExpenses_react-app/static/css/main.7a14d174.css",
-    "main.js": "/addMyExpenses_react-app/static/js/main.504fea4d.js",
+    "main.css": "/addMyExpenses_react-app/static/css/main.482a1ad0.css",
+    "main.js": "/addMyExpenses_react-app/static/js/main.4e3a59c4.js",
     "static/js/787.001e509f.chunk.js": "/addMyExpenses_react-app/static/js/787.001e509f.chunk.js",
     "index.html": "/addMyExpenses_react-app/index.html",
-    "main.7a14d174.css.map": "/addMyExpenses_react-app/static/css/main.7a14d174.css.map",
-    "main.504fea4d.js.map": "/addMyExpenses_react-app/static/js/main.504fea4d.js.map",
+    "main.482a1ad0.css.map": "/addMyExpenses_react-app/static/css/main.482a1ad0.css.map",
+    "main.4e3a59c4.js.map": "/addMyExpenses_react-app/static/js/main.4e3a59c4.js.map",
     "787.001e509f.chunk.js.map": "/addMyExpenses_react-app/static/js/787.001e509f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a14d174.css",
-    "static/js/main.504fea4d.js"
+    "static/css/main.482a1ad0.css",
+    "static/js/main.4e3a59c4.js"
   ]
 }
