@@ -34,12 +34,18 @@
 }
 @media(max-width:790px){
 .inf{
-    width: 40%;
+   max-width:55%;
+   padding: 10px;
+   font-size: 1.3rem;
+   overflow: hidden;
 }
 .item{
 justify-content: left;
 }
 .amt{
-    width: 25%;
+    width: 20%;
+    padding: 10px;
+    font-size: 1rem;
+    margin: 0px;
 }
 }

@@ -14,6 +14,7 @@
   }
   .new-expense_control.invalid label {
     color: red;
+    
   }
   
   .new-expense_control input {

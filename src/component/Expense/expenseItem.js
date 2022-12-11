@@ -4,7 +4,7 @@ function expenseItem(props){
     return (<div className={`${styles['item']}`}>
          <ExpenseDate date={props.date}></ExpenseDate>
         <h2 className={`${styles['inf']}`}>{props.title}</h2>
-        <p className={`${styles['amt']}`}>Rs. {props.amount}</p>
+        <p className={`${styles['amt']}`}>Rs.{props.amount}</p>
      </div>);
 }
 
