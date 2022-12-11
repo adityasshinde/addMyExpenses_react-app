@@ -1,8 +1,8 @@
 import React,{useState} from 'react';
-import './expense.css';
+import styles from './expense.module.css';
 import ExpensesList from './ExpensesList';
 import ExpenseChart from './ExpenseChart';
-import ExpensesFilter from '../newExpense/ExpensesFilter';
+import ExpensesFilter from '../Expense/ExpensesFilter';
 function Expense(props){
   
 
@@ -19,8 +19,8 @@ function Expense(props){
 
    
     return(<li>
-        <div className='mainExpenseDiv'>
-             <ExpensesFilter selected={selectedYear} onFilter={filteredYear} className='fil'></ExpensesFilter>
+        <div className={`${styles['mainExpenseDiv']}`}>
+             <ExpensesFilter selected={selectedYear} onFilter={filteredYear} className={`${styles['fil']}`}></ExpensesFilter>
              <ExpenseChart expenses={filteredExpenses}></ExpenseChart>
              <ExpensesList items={filteredExpenses}></ExpensesList>
               {/* above line instruction is a part of useState implementation */}

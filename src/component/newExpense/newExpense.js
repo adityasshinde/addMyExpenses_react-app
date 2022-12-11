@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './newExpense.css';
+import styles from './newExpense.module.css';
 import ExpenseForm from "./expenseForm";
 const NewExpense=(props)=>{
     const saveExpenseDataHandler=(enteredExpenseData)=>{
@@ -17,7 +17,7 @@ const NewExpense=(props)=>{
         setIsEditing(false);
      }
    return(
-    <div className="new-expense">
+    <div className={`${styles['new-expense']}`}>
         {!isEditing && <button onClick={clickHandler}>Add new Expense</button>}
        {isEditing && <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} onCancle={setCancleEditing}></ExpenseForm>}
     </div>

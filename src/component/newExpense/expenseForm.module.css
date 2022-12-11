@@ -12,6 +12,9 @@
     margin-bottom: 0.5rem;
     display: block;
   }
+  .new-expense_control.invalid label {
+    color: red;
+  }
   
   .new-expense_control input {
     font: inherit;
@@ -21,7 +24,23 @@
     width: 20rem;
     max-width: 100%;
   }
+  .new-expense_control.invalid input {
+   border-color: red;
+   font-size: 1.2rem;
+  }
   
   .new-expense_actions {
     text-align: right;
+  }
+
+  @media(max-width:790px){
+    form{
+     width: 90vw;
+      margin: 0px;
+      padding: 0px;
+    }
+    .new-expense_controls {
+      flex-direction: column;
+      align-items: center;
+    }
   }

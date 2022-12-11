@@ -1,7 +1,10 @@
 import React,{useState} from "react";
-import './expenseForm.css';
+import styles from './expenseForm.module.css';
 const ExpenseForm=(props)=>{
     //USING MANY STATE 
+     const [isValidTitle,setIsValidTitle]=useState(true);
+     const [isValidAmt,setIsValidAmt]=useState(true);
+     const [isValidDate,setIsValidDate]=useState(true);
      const [enteredTitle,setEnteredTitle]=useState('');
      const [enteredAmount,setEnteredAmount]=useState('');
      const [enteredDate,setEnteredDate]=useState('');
@@ -14,6 +17,9 @@ const ExpenseForm=(props)=>{
     //   });
 
     const titleChangeHandler=(event)=>{
+        if(event.target.value.trim().length>0){
+          setIsValidTitle(true);
+        }
    setEnteredTitle(event.target.value);
     //    setInput({
     //     ...userInput,  //use of spread operator
@@ -26,6 +32,9 @@ const ExpenseForm=(props)=>{
     //  });
     }
     const amountChangeHandler=(event)=>{
+        if(event.target.value.trim().length>0){
+            setIsValidAmt(true);
+          }
   setEnteredAmount(event.target.value);
 // setInput({
 //    ...userInput,
@@ -33,6 +42,9 @@ const ExpenseForm=(props)=>{
 // });
     }
     const dateChangeHandler=(event)=>{
+        if(event.target.value.trim().length>0){
+            setIsValidDate(true);
+          }
    setEnteredDate(event.target.value);
     // setInput({
     //     ...userInput,
@@ -43,7 +55,19 @@ const ExpenseForm=(props)=>{
    
     const submitHandler=(event)=>{
      event.preventDefault();//Prevents the default request to the server.
-
+     
+     if(enteredTitle.trim().length===0){
+        setIsValidTitle(false);
+        return;
+      }
+      else if(enteredAmount.trim().length===0){
+        setIsValidAmt(false);
+        return;
+      }
+      else if(enteredDate.trim().length===0){
+        setIsValidDate(false);
+        return;
+      }
      const expenseData={
         title:enteredTitle,
         amount:+enteredAmount,
@@ -60,16 +84,16 @@ const ExpenseForm=(props)=>{
     };
     return(
         <form onSubmit={submitHandler}>
-            <div className="new-expense_controls">
-                <div className="new-expense_control">
+            <div className={`${styles['new-expense_controls']}`}>
+                <div className={`${styles['new-expense_control']} ${!isValidTitle && styles.invalid}`}>
                     <label>Title:</label>
                     <input type='text' value={enteredTitle} onChange={titleChangeHandler} />
                 </div>
-                <div className="new-expense_control">
+                <div className={`${styles['new-expense_control']} ${!isValidAmt && styles.invalid}`}>
                     <label>Amount</label>
                     <input type='number' min="0.01" step="0.01" value={enteredAmount} onChange={amountChangeHandler} />
                 </div>
-                <div className="new-expense_control">
+                <div className={`${styles['new-expense_control']} ${!isValidDate && styles.invalid}`}>
                     <label>Date:</label>
                     <input type='date' min="2021-01-01" max="2022-12-31" value={enteredDate}  onChange={dateChangeHandler} />
                 </div>

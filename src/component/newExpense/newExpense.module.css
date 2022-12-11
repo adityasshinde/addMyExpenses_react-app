@@ -36,3 +36,9 @@
   .new-expense button.alternative:active {
     background-color: #ddb3f8;
   }
+  @media(max-width:790px){
+    .new-expense{
+  
+      width: 90vw;
+    }
+  }

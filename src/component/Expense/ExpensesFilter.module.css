@@ -25,3 +25,11 @@
     font-weight: bold;
     border-radius: 6px;
   }
+
+  @media(max-width:790px){
+    .expenses-filter {
+
+      width: 90%;
+    }
+    
+  }
