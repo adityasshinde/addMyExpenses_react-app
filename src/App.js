@@ -10,11 +10,24 @@ function App() {
             return [expense,...prevExpense];
           });
   };
+
+  const deleteItemHandler=(delkey)=>{
+      setExpenses(expenses=>{
+        const updated=expenses.filter(expense=>expense.id!==delkey);
+        return updated;
+      });
+  };
+  const deleteListHandler=()=>{
+    setExpenses(expenses=>{
+      const updated=expenses.filter(expense=>expense.id==='abc');
+      return updated;
+    });
+  };
   return (
     <div className="App">
       <h1>addMyExpenses.com</h1>
       <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
-      <Expense items={expenses}></Expense>
+      <Expense items={expenses} onDeleteItemC={deleteItemHandler} onDeleteListC={deleteListHandler}></Expense>
     </div>
   );
 }

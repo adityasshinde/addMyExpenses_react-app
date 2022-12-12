@@ -32,6 +32,7 @@
     float: left;
     display: block;
 }
+
 @media(max-width:790px){
 .inf{
    max-width:55%;

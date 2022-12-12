@@ -22,7 +22,7 @@ function Expense(props){
         <div className={`${styles['mainExpenseDiv']}`}>
              <ExpensesFilter selected={selectedYear} onFilter={filteredYear} className={`${styles['fil']}`}></ExpensesFilter>
              <ExpenseChart expenses={filteredExpenses}></ExpenseChart>
-             <ExpensesList items={filteredExpenses}></ExpensesList>
+             <ExpensesList items={filteredExpenses} onDeleteItem={props.onDeleteItemC} onDeleteList={props.onDeleteListC}></ExpensesList>
               {/* above line instruction is a part of useState implementation */}
              {/* <button onClick={complete} className='btn'>Submit</button> */}
         </div></li>
