@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import styles from './expenseForm.module.css';
+import ErrModel from "../ErrModal/ErrModel";
 const ExpenseForm=(props)=>{
     //USING MANY STATE 
      const [isValidTitle,setIsValidTitle]=useState(true);
@@ -8,6 +9,7 @@ const ExpenseForm=(props)=>{
      const [enteredTitle,setEnteredTitle]=useState('');
      const [enteredAmount,setEnteredAmount]=useState('');
      const [enteredDate,setEnteredDate]=useState('');
+     const [Error,setError]=useState();
 
     //USING ONE STATE
     //   const [userInput,setInput]=useState({
@@ -61,13 +63,21 @@ const ExpenseForm=(props)=>{
         return;
       }
       else if(enteredAmount.trim().length===0){
-        setIsValidAmt(false);
-        return;
+           setIsValidAmt(false);
+           return;
       }
       else if(enteredDate.trim().length===0){
         setIsValidDate(false);
         return;
       }
+      else if(enteredAmount<0){
+        setError({
+            title:"Invalid Amount",
+            message:"Please enter a valid expense amount"
+           });
+           return;
+      }
+  
      const expenseData={
         title:enteredTitle,
         amount:+enteredAmount,
@@ -82,7 +92,10 @@ const ExpenseForm=(props)=>{
      setEnteredAmount('');
      setEnteredDate('');
     };
+    const clickHandler=()=>{setError(null)};
     return(
+        <React.Fragment>
+        {Error && <ErrModel title={Error.title} message={Error.message} clickHandler={clickHandler}></ErrModel>};
         <form onSubmit={submitHandler}>
             <div className={`${styles['new-expense_controls']}`}>
                 <div className={`${styles['new-expense_control']} ${!isValidTitle && styles.invalid}`}>
@@ -91,7 +104,7 @@ const ExpenseForm=(props)=>{
                 </div>
                 <div className={`${styles['new-expense_control']} ${!isValidAmt && styles.invalid}`}>
                     <label>Amount</label>
-                    <input type='number' min="0.01" step="0.01" value={enteredAmount} onChange={amountChangeHandler}  placeholder='Enter Amount'/>
+                    <input type='number' step='0.01' value={enteredAmount} onChange={amountChangeHandler}  placeholder='Enter Amount'/>
                 </div>
                 <div className={`${styles['new-expense_control']} ${!isValidDate && styles.invalid}`}>
                     <label>Date</label>
@@ -102,7 +115,7 @@ const ExpenseForm=(props)=>{
                 <button type="button" onClick={props.onCancle}>Cancel</button>
                 <button type="submit" id="btn">Add Expense</button>
             </div>
-        </form>
+        </form></React.Fragment>
     );
 }
 export default ExpenseForm;
