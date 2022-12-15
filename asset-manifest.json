@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/addMyExpenses_react-app/static/css/main.ad4f33b2.css",
-    "main.js": "/addMyExpenses_react-app/static/js/main.12363cb2.js",
+    "main.css": "/addMyExpenses_react-app/static/css/main.8a68d0f3.css",
+    "main.js": "/addMyExpenses_react-app/static/js/main.5a28db9c.js",
     "static/js/787.001e509f.chunk.js": "/addMyExpenses_react-app/static/js/787.001e509f.chunk.js",
     "index.html": "/addMyExpenses_react-app/index.html",
-    "main.ad4f33b2.css.map": "/addMyExpenses_react-app/static/css/main.ad4f33b2.css.map",
-    "main.12363cb2.js.map": "/addMyExpenses_react-app/static/js/main.12363cb2.js.map",
+    "main.8a68d0f3.css.map": "/addMyExpenses_react-app/static/css/main.8a68d0f3.css.map",
+    "main.5a28db9c.js.map": "/addMyExpenses_react-app/static/js/main.5a28db9c.js.map",
     "787.001e509f.chunk.js.map": "/addMyExpenses_react-app/static/js/787.001e509f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad4f33b2.css",
-    "static/js/main.12363cb2.js"
+    "static/css/main.8a68d0f3.css",
+    "static/js/main.5a28db9c.js"
   ]
 }
